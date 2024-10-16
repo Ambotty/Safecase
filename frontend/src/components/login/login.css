@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.background-image{
+    height: 1020px;
+    max-height: 760px;
+    width:100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: fill;
+    position: fixed;
+}
+.login-container{
+    top: 130px;
+    left: 58%;
+    border-radius: 20px;
+    height: 505px;
+    width: 400px;
+    background-color:#F7F0EA;
+    box-shadow: 0px , 10px , 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+.login-container .form-title{
+   
+    position: relative;
+    left: 127px;
+    top: 40px;
+    font-family: montserrat , sans-serif;
+    color: #123497;
+ 
+}
+.login-form{
+    
+    padding: 60px 37px 0px 47px;
+    font-family: montserrat , sans-serif;
+}
+.login-form .input-wrapper{
+    width: 285px;
+    height: 55px;
+    font-size: 14px;
+    color: #123497;
+    margin-bottom: 18px;
+}
+.sign-up-text{
+    font-family: montserrat , sans-serif;
+    margin-left: 48px;
+    font-size: 14px;
+    
+
+    
+}
+
+
+
+.login-form .input-wrapper .input-field{
+    height: 60%;
+    width: 280px;
+    border-radius: 13px;
+    border: none;
+    background-color: #CDCEE4;
+    margin-left: -4px;
+    margin-top: 2px;
+    padding: 0 0 0 1.12rem ;
+}
+.login-btn{
+    height: 35px;
+    width: 298px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0B1656;
+    color: white;
+    margin-top: 19px;
+    cursor: pointer;
+}
+.login-btn:hover{
+    background-color: #123497;
+}
+
+.forgot-pass-link{
+    margin-left: 162px;
+    color: #123497;
+    font-size: 14px;
+}
+.bold{
+    font-weight: 600;
+    color: #0B1656;
+    cursor: pointer;
+}
+.bold:hover{
+    color:#123497
+}
+.login-page-text{
+    position: absolute;
+    align-items:center;
+    display: grid;
+    margin-left: 260px;
+    margin-top: 160px;
+}
+.logo .logo-img{
+    position:relative;
+    width: 340PX;
+    height: 111PX;
+    margin-left: -25px;
+
+}
+ .welcome-message{
+    font-family: montserrat , sans-serif;
+    margin-top: 40px;
+    position: relative;
+    font-size: 40px;
+    color: #1A3895;
+}
+.caption-heading{
+    margin-top: -24px;
+}
+.caption-heading h3{
+    font-family: montserrat , sans-serif;
+    margin-top: 40px;
+    position: relative;
+    font-size: 27px;
+    color: #1A3895;
+   
+}
+.caption-heading  p{
+    font-family: montserrat , sans-serif;
+    margin-top: 40px;
+    position: relative;
+    font-size: 21px;
+    color: #fff;
+    font-weight: 300;
+}

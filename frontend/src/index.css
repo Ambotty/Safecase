@@ -1,0 +1,19 @@
+
+
+body{
+  background-image: url("D:\React\safecase\frontend\src\assets\safecace-login-background.jpg" );
+  position: static;
+  background-repeat:no-repeat ;
+  height: 1020px;
+  max-height: 760px;
+  width:100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: fill;
+  position: fixed;
+
+}
+a {
+  text-decoration: none;
+  
+} 
