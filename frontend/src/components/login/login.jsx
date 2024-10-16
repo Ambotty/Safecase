@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './login.css';
 import myimage from '../../assets/safecace-login-background.jpg';
 import logoimg from '../../assets/safecase.png';
+import { Link } from 'react-router-dom';
+
+
+
 
 const Login = () => {
   // State for storing username, password, and errors
@@ -55,11 +59,12 @@ const Login = () => {
             />
           </div>
           {error && <p className="error-message">{error}</p>}
-          <a href="#" className="forgot-pass-link">Forgot Password?</a>
+          <Link to="/forgot-password" className="forgot-pass-link">Forgot Password?</Link>
           <button type="submit" className="login-btn">Log In</button>
         </form>
         <p className="sign-up-text">
-          New Here? <a className="bold" href="./components/register/register">Click Here to Register</a>
+          New Here? <Link className="bold" to="/register">Click Here to Register</Link>
+
         </p>
       </div>
       <div className="login-page-text">

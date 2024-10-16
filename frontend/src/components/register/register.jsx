@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './register.css';
 // import myimage from '../../assets/safecace-signup-background.jpg';
 import logoimg from '../../assets/safecase.png';
+import { Link } from 'react-router-dom';
+
+
 
 const SignUp = () => {
   // State for storing user input and errors
@@ -87,19 +90,20 @@ const SignUp = () => {
           <button type="submit" className="signup-btn">Sign Up</button>
         </form>
         <p className="sign-in-text">
-          Already have an account? <a className="bold" href="./components/login/login">Log In Here</a>
+          Already have an account? <Link className="bold" to="/login">Log In Here</Link>
+
         </p>
       </div>
       <div className="signup-page-text">
-        <h2 className="welcome-message">JOIN US</h2>
+        <h2 className="welcome-message">WELCOME</h2>
         <div className="logo">
-          {/* <img className="logo-img" src={logoimg} alt="Logo" /> */}
+          <img className="logo-img" src={logoimg} alt="Logo" />
         </div>
         <div className="caption-heading">
-          <h3>Safety First!</h3>
-          {/* <p className='caption-message'>Become part of a proactive <br /> community where safety is <br /> always a priority. Sign up now <br /> and make a difference.</p> */}
-        </div>
-      </div>
+          <h3>Your Safety, Our Priority!</h3>
+          <p className='caption-message'>Stay proactive in ensuring a safer <br />  environment. Our platform allows <br />you to report, track, and resolve <br /> safety incidents effortlessly.</p>
+        </div>    
+      </div>     
     </div>
   );
 };

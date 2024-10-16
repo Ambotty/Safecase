@@ -52,7 +52,13 @@
 
     
 }
-
+.signup-page-text{
+    position: absolute;
+    align-items:center;
+    display: grid;
+    margin-left: 260px;
+    margin-top: 160px;
+}
 
 
 .signup-form .input-wrapper .input-field{
@@ -92,13 +98,7 @@
 .bold:hover{
     color:#123497
 }
-.login-page-text{
-    position: absolute;
-    align-items:center;
-    display: grid;
-    margin-left: 260px;
-    margin-top: 160px;
-}
+
 .logo .logo-img{
     position:relative;
     width: 340PX;
