@@ -2,49 +2,57 @@ import React, { useState } from 'react';
 import './login.css';
 import myimage from '../../assets/safecace-login-background.jpg';
 import logoimg from '../../assets/safecase.png';
-import { Link } from 'react-router-dom';
-
-
-
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase'; // Import Firebase auth from your firebase.js
 
 const Login = () => {
-  // State for storing username, password, and errors
-  const [username, setUsername] = useState('');
+  // State for storing email (username), password, and errors
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // To navigate after successful login
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Basic validation
-    if (!username || !password) {
-      setError('Both username and password are required.');
+    if (!email || !password) {
+      setError('Both email and password are required.');
       return;
     }
 
-    // Logic for login process (could be API call, authentication, etc.)
-    console.log('Logging in with:', { username, password });
+    try {
+      // Firebase sign in with email and password
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log('User logged in:', userCredential.user);
 
-    // Clear form and error after submission
-    setUsername('');
-    setPassword('');
-    setError('');
+      // Navigate to dashboard after successful login
+      navigate('/dashboard');
+
+      // Clear form and error after successful login
+      setEmail('');
+      setPassword('');
+      setError('');
+    } catch (err) {
+      // Handle Firebase authentication errors
+      setError(err.message);
+    }
   };
 
   return (
     <div className='background'>
-      {/* <img className='background-image' src={myimage} alt="Login Background" /> */}
       <div className="login-container">
         <h3 className='form-title'>USER LOGIN</h3>
         <form action="#" className="login-form" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            Username
+            Email
             <input
-              type="text"
+              type="email"
               className="input-field"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -64,7 +72,6 @@ const Login = () => {
         </form>
         <p className="sign-up-text">
           New Here? <Link className="bold" to="/register">Click Here to Register</Link>
-
         </p>
       </div>
       <div className="login-page-text">
@@ -74,7 +81,10 @@ const Login = () => {
         </div>
         <div className="caption-heading">
           <h3>Your Safety, Our Priority!</h3>
-          <p className='caption-message'>Stay proactive in ensuring a safer <br />  environment. Our platform allows <br />you to report, track, and resolve <br /> safety incidents effortlessly.</p>
+          <p className='caption-message'>
+            Stay proactive in ensuring a safer <br /> environment. Our platform allows <br />
+            you to report, track, and resolve <br /> safety incidents effortlessly.
+          </p>
         </div>
       </div>
     </div>

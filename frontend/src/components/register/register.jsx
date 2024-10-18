@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './register.css';
-// import myimage from '../../assets/safecace-signup-background.jpg';
 import logoimg from '../../assets/safecase.png';
 import { Link } from 'react-router-dom';
-
-
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase'; // Import Firebase auth from your firebase.js
 
 const SignUp = () => {
   // State for storing user input and errors
@@ -15,7 +14,7 @@ const SignUp = () => {
   const [error, setError] = useState('');
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Basic validation
@@ -29,20 +28,27 @@ const SignUp = () => {
       return;
     }
 
-    // Logic for sign-up process (could be API call, authentication, etc.)
-    console.log('Signing up with:', { username, email, password });
+    try {
+      // Create user with email and password using Firebase Authentication
+      await createUserWithEmailAndPassword(auth, email, password);
+      console.log('User signed up:', { username, email });
 
-    // Clear form and error after submission
-    setUsername('');
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
-    setError('');
+      // Clear form and error after successful sign-up
+      setUsername('');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setError('');
+
+      // You can also redirect to another page here (e.g., dashboard) after successful sign-up
+    } catch (err) {
+      // Handle Firebase errors
+      setError(err.message);
+    }
   };
 
   return (
     <div className='background'>
-      {/* <img className='background-image' src={myimage} alt="SignUp Background" /> */}
       <div className="signup-container">
         <h3 className='form-title'>USER SIGN UP</h3>
         <form action="#" className="signup-form" onSubmit={handleSubmit}>
@@ -91,7 +97,6 @@ const SignUp = () => {
         </form>
         <p className="sign-in-text">
           Already have an account? <Link className="bold" to="/login">Log In Here</Link>
-
         </p>
       </div>
       <div className="signup-page-text">
@@ -101,7 +106,7 @@ const SignUp = () => {
         </div>
         <div className="caption-heading">
           <h3>Your Safety, Our Priority!</h3>
-          <p className='caption-message'>Stay proactive in ensuring a safer <br />  environment. Our platform allows <br />you to report, track, and resolve <br /> safety incidents effortlessly.</p>
+          <p className='caption-message'>Stay proactive in ensuring a safer <br /> environment. Our platform allows <br />you to report, track, and resolve <br /> safety incidents effortlessly.</p>
         </div>    
       </div>     
     </div>
