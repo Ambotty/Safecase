@@ -1,6 +1,10 @@
 import React from 'react';
 import './UserDashboard.css';
 import { Link } from 'react-router-dom';
+import workimg from '../../assets/work-safety.png';
+import logo from '../../assets/safecase.png';
+import gear from '../../assets/gear.png';
+import equipment from '../../assets/equipment.png';
 
 const UserDashboard = () => {
   return (
@@ -16,7 +20,9 @@ const UserDashboard = () => {
       </div>
       <div className="main-content">
         <div className="header">
-          <div className="logo">SafeCase</div>
+          <div className="logo">
+            <img className='safecase-logo' src={logo} alt="" />
+          </div>
           <div className="user-info">
             USER
             <i className="fas fa-user-circle user-icon"></i>
@@ -24,14 +30,17 @@ const UserDashboard = () => {
         </div>
         <div className="grid">
           <div className="grid-item">
-            <i className="fas fa-vest"></i>
-            <p>Uniform/Safety Equipment Violation</p>
+              <img className="work-image" src={workimg} alt="" />
+              <i className="fas fa-vest"></i>
+              <p>Uniform/Safety Equipment Violation</p>
           </div>
           <div className="grid-item">
+          <img className="gear-image" src={gear} alt="" />
             <i className="fas fa-first-aid"></i>
             <p>Health And Safety Incidents</p>
           </div>
           <div className="grid-item">
+          <img className="equipment-image" src={equipment} alt="" />
             <i className="fas fa-tools"></i>
             <p>Equipment Related Incidents</p>
           </div>

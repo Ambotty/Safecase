@@ -99,3 +99,19 @@ body {
 .grid-item p {
     font-size: 18px;
 }
+.work-image{
+    height: 60px;
+    width:60px;
+}
+.safecase-logo{
+    width: 320PX;
+    height: 91PX;
+}
+.gear-image{
+    height: 60px;
+    width:60px;
+}
+.equipment-image{
+    height: 60px;
+    width:60px;
+}
