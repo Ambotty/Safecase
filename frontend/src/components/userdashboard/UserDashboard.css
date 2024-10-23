@@ -3,10 +3,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #b0b0b0;
 }
+
 .container {
     display: flex;
     height: 100vh;
 }
+
 .sidebar {
     width: 25%;
     background-color: #1a3d7c;
@@ -16,18 +18,22 @@ body {
     align-items: center;
     padding-top: 20px;
 }
+
 .sidebar h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 .sidebar .user-icon {
     font-size: 50px;
     margin-bottom: 10px;
 }
+
 .sidebar .username {
     font-size: 18px;
     margin-bottom: 30px;
 }
+
 .sidebar .menu-item {
     width: 80%;
     background-color: #b0b0b0;
@@ -39,9 +45,11 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
+
 .sidebar .menu-item:hover {
     background-color: #d0d0d0;
 }
+
 .sidebar .logout {
     margin-top: auto;
     margin-bottom: 20px;
@@ -51,36 +59,43 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .main-content {
     width: 75%;
     padding: 20px;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .header .logo {
     font-size: 36px;
     font-weight: bold;
     color: #1a3d7c;
 }
+
 .header .user-info {
     display: flex;
     align-items: center;
     font-size: 18px;
     color: #1a3d7c;
 }
+
 .header .user-info .user-icon {
     font-size: 24px;
     margin-left: 10px;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 .grid-item {
     background-color: #1a3d7c;
     color: white;
@@ -88,30 +103,30 @@ body {
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for smoother hover effect */
 }
+
 .grid-item:hover {
     background-color: #2a4d8c;
 }
+
 .grid-item i {
     font-size: 50px;
     margin-bottom: 10px;
 }
+
 .grid-item p {
     font-size: 18px;
 }
-.work-image{
+
+.work-image,
+.gear-image,
+.equipment-image {
     height: 60px;
-    width:60px;
+    width: 60px;
 }
-.safecase-logo{
-    width: 320PX;
-    height: 91PX;
-}
-.gear-image{
-    height: 60px;
-    width:60px;
-}
-.equipment-image{
-    height: 60px;
-    width:60px;
+
+.safecase-logo {
+    width: 320px; /* Changed 'PX' to 'px' for consistency */
+    height: 91px; /* Changed 'PX' to 'px' for consistency */
 }
