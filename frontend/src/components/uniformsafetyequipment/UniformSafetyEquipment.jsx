@@ -1,5 +1,5 @@
 import React from "react";
-import './UniformSafetyEquipment.css'; // Import CSS file
+// import './UniformSafetyEquipment.css'; // Import CSS file
 
 const formFields = [
   { label: "Violation Type", placeholder: "Select here" },

@@ -1,24 +1,28 @@
-import React from 'react';
-import './UserDashboard.css';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
-import { signOut } from 'firebase/auth'; // Import signOut from Firebase
-import { auth } from '../../firebase'; // Assuming you have auth initialized in firebase.js
-import workimg from '../../assets/work-safety.png';
-import logo from '../../assets/safecase.png';
-import gear from '../../assets/gear.png';
-import equipment from '../../assets/equipment.png';
+import React from "react";
+import "./UserDashboard.css";
+import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
+import workimg from "../../assets/work-safety.png";
+import logo from "../../assets/safecase.png";
+import gear from "../../assets/gear.png";
+import equipment from "../../assets/equipment.png";
 
 const UserDashboard = () => {
-  const navigate = useNavigate(); // Initialize useNavigate for navigation
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/uniform-safety-equipment");
+  };
 
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        console.log('User signed out');
-        navigate('/login'); // Redirect to login after successful logout
+        console.log("User signed out");
+        navigate("/login");
       })
       .catch((error) => {
-        console.error('Sign out error:', error);
+        console.error("Sign out error:", error);
       });
   };
 
@@ -27,16 +31,16 @@ const UserDashboard = () => {
       <div className="sidebar">
         <h1>WELCOME</h1>
         <i className="fas fa-user-circle user-icon"></i>
-        <div className="username">USERNAME</div>
+        <div className="username">{auth.currentUser?.displayName || "USERNAME"}</div>
         <Link className="menu-item" to="/reporting">REPORTING</Link>
         <Link className="menu-item" to="/user-info">USER INFORMATION</Link>
-        <Link className="menu-item" to="/feedback">FEEDBACK</Link>  
+        <Link className="menu-item" to="/feedback">FEEDBACK</Link>
         <button className="logout" onClick={handleLogout}>LOG OUT</button>
       </div>
       <div className="main-content">
         <div className="content-header">
           <div className="logo">
-            <img className='safecase-logo' src={logo} alt="" />
+            <img className="safecase-logo" src={logo} alt="Safe Case Logo" />
           </div>
           <div className="user-info">
             USER
@@ -44,18 +48,18 @@ const UserDashboard = () => {
           </div>
         </div>
         <div className="grid">
-          <div className="grid-item">
-            <img className="work-image" src={workimg} alt="" />
+          <div className="grid-item" onClick={handleNavigation} style={{ cursor: "pointer" }} tabIndex="0">
+            <img className="work-image" src={workimg} alt="Work Safety" />
             <i className="fas fa-vest"></i>
-            <p>Uniform/Safety Equipment Violation</p> 
+            <p>Uniform Safety Equipments</p>
           </div>
           <div className="grid-item">
-            <img className="gear-image" src={gear} alt="" />
+            <img className="gear-image" src={gear} alt="Health and Safety" />
             <i className="fas fa-first-aid"></i>
             <p>Health And Safety Incidents</p>
           </div>
           <div className="grid-item">
-            <img className="equipment-image" src={equipment} alt="" />
+            <img className="equipment-image" src={equipment} alt="Equipment Related" />
             <i className="fas fa-tools"></i>
             <p>Equipment Related Incidents</p>
           </div>

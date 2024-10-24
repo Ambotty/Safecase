@@ -37,6 +37,9 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Navbar />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/uniform-safety-equipment" element={<UniformSafetyEquipment />} /> 
+          
+
           
           {/* Protect the dashboard route */}
           <Route 
