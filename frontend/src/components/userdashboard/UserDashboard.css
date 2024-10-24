@@ -3,6 +3,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #b0b0b0;
 }
+
+.dashboard-container{
 .dashboard-container {
     display: flex;
     height: 100vh;
