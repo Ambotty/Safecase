@@ -48,9 +48,9 @@
 }
 
 .violationBanner {
-    border-radius: 12px;
+    border-radius: 10px;
     background-color: rgba(216, 217, 219, 1);
-    display: flex;
+    display: inline;
     margin-top: 45px;
     gap: 10px;
     flex-wrap: wrap;

@@ -6,6 +6,7 @@ import ForgotPassword from './components/forgotpass/ForgotPassword';
 import UserDashboard from './components/userdashboard/UserDashboard'; 
 import UniformSafetyEquipment from './components/uniformsafetyequipment/UniformSafetyEquipment'; // Import the component
 import HealthAndSafetyIncidents from './components/healthAndSafety/HealthAndSafetyIncidents'; 
+import EquipmentRelatedIncidents from './components/equipmentrelatedincidents/EquipmentRelatedIncidents'; 
 import { onAuthStateChanged } from 'firebase/auth'; // Import onAuthStateChanged from Firebase
 import { auth } from './firebase'; // Firebase auth import
 
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/uniform-safety-equipment" element={<UniformSafetyEquipment />} /> 
           <Route path="/health-and-safety-incidents" element={<HealthAndSafetyIncidents />} /> 
+          <Route path="/equipment-related-incidents" element={<EquipmentRelatedIncidents />} /> 
           
 
           
