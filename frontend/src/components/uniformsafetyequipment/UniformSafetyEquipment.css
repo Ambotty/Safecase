@@ -46,26 +46,14 @@
 }
 
 .violationBanner {
-  border-radius: 12px;
-  background-color: rgba(216, 217, 219, 1);
-  align-self: end;
-  margin-top: 45px;
-  gap: 10px;
-  padding: 12px 34px;
-  border: 11px solid rgba(11, 22, 86, 1);
-}
-
-.violationIcon {
-  aspect-ratio: 0.88;
-  object-fit: contain;
-  object-position: center;
-  width: 60px;
-}
-
-.violationText {
-  flex-basis: auto;
-  flex-grow: 1;
-  margin: auto 0;
+    border-radius: 10px;
+    background-color: rgba(216, 217, 219, 1);
+    display: inline;
+    margin-top: 45px;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 34px;
+    border: 11px solid rgba(11, 22, 86, 1);
 }
 
 .formContainer {

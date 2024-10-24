@@ -1,0 +1,234 @@
+.container123 {
+    max-width: none !important;
+  }
+  
+  .wrapper123 {
+    display: flex;
+    padding-bottom: 76px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .header123 {
+    background-color: #babed2;
+    width: 100%;
+    padding: 96px 68px 199px;
+  }
+  
+  @media (max-width: 991px) {
+    .header123 {
+      max-width: 100%;
+      padding: 0 20px 100px;
+    }
+  }
+  
+  .headerContent123 {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .headerContent123 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .logoWrapper123 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 15%;
+  }
+  
+  @media (max-width: 991px) {
+    .logoWrapper123 {
+      width: 100%;
+    }
+  }
+  
+  .logo123 {
+    aspect-ratio: 2.31;
+    object-fit: contain;
+    object-position: center;
+    width: 139px;
+    margin-top: 11px;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 991px) {
+    .logo123 {
+      margin-top: 40px;
+    }
+  }
+  
+  .titleWrapper123 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 85%;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .titleWrapper123 {
+      width: 100%;
+    }
+  }
+  
+  .titleBox123 {
+    border-radius: 12px;
+    background-color: #d8d9db;
+    display: flex;
+    flex-grow: 1;
+    gap: 31px;
+    color: #001558;
+    text-transform: uppercase;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 23px 56px;
+    font: 900 34px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    border: 11px solid #0b1656;
+  }
+  
+  @media (max-width: 991px) {
+    .titleBox123 {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+  
+  .titleIcon123 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 52px;
+  }
+  
+  .title123 {
+    flex-grow: 1;
+    width: 581px;
+    flex-basis: auto;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .title123 {
+      max-width: 100%;
+    }
+  }
+  
+  .formSection123 {
+    z-index: 10;
+    width: 100%;
+    max-width: 1386px;
+    margin: -137px 0 0 16px;
+  }
+  
+  .formContent123 {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .formContent123 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .formFields123 {
+    border-radius: 30px;
+    background-color: #d7d7d9;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: start;
+    color: #0b1656;
+    width: 100%;
+    padding: 22px 40px 46px;
+    font: 700 20px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .fieldGroup123 {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  
+  .label123 {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .input123 {
+    width: 100%;
+    font-weight: 300;
+    margin-top: 8px;
+    border: 1px solid #0b1656;
+  }
+  
+  .divider123 {
+    background-color: #0b1656;
+    width: 100%;
+    height: 1px;
+    margin: 6px 0;
+    border: none;
+  }
+  
+  .descriptionSection123 {
+    display: flex;
+    margin-top: 22px;
+    width: 100%;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+  }
+  
+  .descriptionBox123 {
+    border-radius: 10px;
+    background-color: #d1d1d9;
+    display: flex;
+    flex-direction: column;
+    font-size: 19px;
+    color: #0b1656;
+    padding: 20px 22px 52px;
+    border: 1px solid #cdcee4;
+  }
+  
+  .descriptionInput123 {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    background: transparent;
+    resize: none;
+    font: inherit;
+    color: inherit;
+  }
+  
+  .buttonGroup123 {
+    display: flex;
+    margin-top: 28px;
+    gap: 13px;
+    font-size: 17px;
+  }
+  
+  .submitButton123 {
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    color: #0b1656;
+    padding: 7px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cancelButton123 {
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    padding: 7px 19px;
+    border: 1px solid #cdcee4;
+    cursor: pointer;
+  }
+  
