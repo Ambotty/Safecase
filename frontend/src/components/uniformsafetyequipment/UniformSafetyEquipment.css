@@ -49,12 +49,8 @@
   border-radius: 12px;
   background-color: rgba(216, 217, 219, 1);
   align-self: end;
-  display: flex;
   margin-top: 45px;
   gap: 10px;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  flex-basis: auto;
   padding: 12px 34px;
   border: 11px solid rgba(11, 22, 86, 1);
 }
@@ -75,7 +71,6 @@
 .formContainer {
   align-self: center;
   z-index: 10;
-  margin-top: -124px;
   width: 100%;
   max-width: 1325px;
 }
@@ -88,6 +83,7 @@
 .formColumn {
   display: flex;
   flex-direction: column;
+  margin-top: -30px;
   line-height: normal;
   width: 46%;
   margin-left: 0px;

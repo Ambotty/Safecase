@@ -47,11 +47,8 @@ function UniformSafetyEquipment() {
   return (
     <section className="container">
       <header className="header">
-        <img loading="lazy" src="header-background.png" alt="" className="headerBackground" />
         <div className="contentWrapper">
-          <img loading="lazy" src="logo.png" alt="Company Logo" className="logo" />
           <div className="violationBanner">
-            <img loading="lazy" src="violation-icon.png" alt="Violation Icon" className="violationIcon" />
             <h1 className="violationText">Uniform & Safety Equipment Violation</h1>
           </div>
         </div>
