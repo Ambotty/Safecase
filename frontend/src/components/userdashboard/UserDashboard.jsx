@@ -11,8 +11,40 @@ import equipment from "../../assets/equipment.png";
 const UserDashboard = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
+  const navigateToUniformSafety = () => {
     navigate("/uniform-safety-equipment");
+  };
+
+  const navigateToHealthAndSafety = () => {
+    navigate("/health-and-safety");
+  };
+
+  const navigateToEquipmentIncidents = () => {
+    navigate("/equipment-related-incidents");
+  };
+
+  const navigateToFireHazards = () => {
+    navigate("/fire-electrical-hazards");
+  };
+
+  const navigateToHazardousMaterial = () => {
+    navigate("/hazardous-material-violation");
+  };
+
+  const navigateToEnvironmentalHazards = () => {
+    navigate("/environmental-hazards");
+  };
+
+  const navigateToPolicyViolations = () => {
+    navigate("/worksite-policy-violations");
+  };
+
+  const navigateToWeatherViolations = () => {
+    navigate("/weather-related-violations");
+  };
+
+  const navigateToHumanErrors = () => {
+    navigate("/human-errors-incident-violation");
   };
 
   const handleLogout = () => {
@@ -27,7 +59,7 @@ const UserDashboard = () => {
   };
 
   return (
-    <div className="container">
+    <div className="dashboard-container">
       <div className="sidebar">
         <h1>WELCOME</h1>
         <i className="fas fa-user-circle user-icon"></i>
@@ -38,7 +70,7 @@ const UserDashboard = () => {
         <button className="logout" onClick={handleLogout}>LOG OUT</button>
       </div>
       <div className="main-content">
-        <div className="header">
+        <div className="content-header">
           <div className="logo">
             <img className="safecase-logo" src={logo} alt="Safe Case Logo" />
           </div>
@@ -48,42 +80,42 @@ const UserDashboard = () => {
           </div>
         </div>
         <div className="grid">
-          <div className="grid-item" onClick={handleNavigation} style={{ cursor: "pointer" }} tabIndex="0">
+          <div className="grid-item" onClick={navigateToUniformSafety} style={{ cursor: "pointer" }} tabIndex="0">
             <img className="work-image" src={workimg} alt="Work Safety" />
             <i className="fas fa-vest"></i>
             <p>Uniform Safety Equipments</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToHealthAndSafety} style={{ cursor: "pointer" }} tabIndex="0">
             <img className="gear-image" src={gear} alt="Health and Safety" />
             <i className="fas fa-first-aid"></i>
             <p>Health And Safety Incidents</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToEquipmentIncidents} style={{ cursor: "pointer" }} tabIndex="0">
             <img className="equipment-image" src={equipment} alt="Equipment Related" />
             <i className="fas fa-tools"></i>
             <p>Equipment Related Incidents</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToFireHazards} style={{ cursor: "pointer" }} tabIndex="0">
             <i className="fas fa-fire"></i>
             <p>Fire And Electrical Hazards</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToHazardousMaterial} style={{ cursor: "pointer" }} tabIndex="0">
             <i className="fas fa-radiation"></i>
             <p>Hazardous Material Violation</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToEnvironmentalHazards} style={{ cursor: "pointer" }} tabIndex="0">
             <i className="fas fa-leaf"></i>
             <p>Environmental Hazards</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToPolicyViolations} style={{ cursor: "pointer" }} tabIndex="0">
             <i className="fas fa-briefcase"></i>
             <p>Worksite Policy Violations</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToWeatherViolations} style={{ cursor: "pointer" }} tabIndex="0">
             <i className="fas fa-cloud-showers-heavy"></i>
             <p>Weather Related Violations</p>
           </div>
-          <div className="grid-item">
+          <div className="grid-item" onClick={navigateToHumanErrors} style={{ cursor: "pointer" }} tabIndex="0">
             <i className="fas fa-user-alt-slash"></i>
             <p>Human Errors Incident Violation</p>
           </div>
