@@ -1,25 +1,40 @@
 import React from 'react';
 import './UserDashboard.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { signOut } from 'firebase/auth'; // Import signOut from Firebase
+import { auth } from '../../firebase'; // Assuming you have auth initialized in firebase.js
 import workimg from '../../assets/work-safety.png';
 import logo from '../../assets/safecase.png';
 import gear from '../../assets/gear.png';
 import equipment from '../../assets/equipment.png';
 
 const UserDashboard = () => {
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        console.log('User signed out');
+        navigate('/login'); // Redirect to login after successful logout
+      })
+      .catch((error) => {
+        console.error('Sign out error:', error);
+      });
+  };
+
   return (
-    <div className="container">
+    <div className="dashboard-container">
       <div className="sidebar">
         <h1>WELCOME</h1>
         <i className="fas fa-user-circle user-icon"></i>
         <div className="username">USERNAME</div>
         <Link className="menu-item" to="/reporting">REPORTING</Link>
         <Link className="menu-item" to="/user-info">USER INFORMATION</Link>
-        <Link className="menu-item" to="/feedback">FEEDBACK</Link>
-        <div className="logout">LOG OUT</div>
+        <Link className="menu-item" to="/feedback">FEEDBACK</Link>  
+        <button className="logout" onClick={handleLogout}>LOG OUT</button>
       </div>
       <div className="main-content">
-        <div className="header">
+        <div className="content-header">
           <div className="logo">
             <img className='safecase-logo' src={logo} alt="" />
           </div>
@@ -30,17 +45,17 @@ const UserDashboard = () => {
         </div>
         <div className="grid">
           <div className="grid-item">
-              <img className="work-image" src={workimg} alt="" />
-              <i className="fas fa-vest"></i>
-              <p>Uniform/Safety Equipment Violation</p>
+            <img className="work-image" src={workimg} alt="" />
+            <i className="fas fa-vest"></i>
+            <p>Uniform/Safety Equipment Violation</p> 
           </div>
           <div className="grid-item">
-          <img className="gear-image" src={gear} alt="" />
+            <img className="gear-image" src={gear} alt="" />
             <i className="fas fa-first-aid"></i>
             <p>Health And Safety Incidents</p>
           </div>
           <div className="grid-item">
-          <img className="equipment-image" src={equipment} alt="" />
+            <img className="equipment-image" src={equipment} alt="" />
             <i className="fas fa-tools"></i>
             <p>Equipment Related Incidents</p>
           </div>

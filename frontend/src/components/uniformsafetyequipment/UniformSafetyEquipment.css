@@ -1,278 +1,199 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding-bottom: 193px;
-    max-width: none !important;
-  }
-  
-  @media (max-width: 991px) {
-    .container {
-      padding-bottom: 100px;
-    }
-  }
-  
-  .header {
-    position: relative;
-    min-height: 383px;
-    width: 100%;
-    padding-bottom: 10px;
-    color: rgba(0, 21, 88, 1);
-    text-transform: uppercase;
-    font: 900 34px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  @media (max-width: 991px) {
-    .header {
-      max-width: 100%;
-    }
-  }
-  
-  .headerBackground {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .contentWrapper {
-    position: relative;
-    background-color: rgba(186, 190, 210, 1);
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    gap: 40px 93px;
-    flex-wrap: wrap;
-    padding: 51px 80px 186px 30px;
-  }
-  
-  @media (max-width: 991px) {
-    .contentWrapper {
-      max-width: 100%;
-      padding: 0 20px 100px;
-    }
-  }
-  
-  .logo {
-    aspect-ratio: 2.31;
-    object-fit: contain;
-    object-position: center;
-    width: 139px;
-    align-self: start;
-    max-width: 100%;
-  }
-  
-  .violationBanner {
-    border-radius: 12px;
-    background-color: rgba(216, 217, 219, 1);
-    align-self: end;
-    display: flex;
-    margin-top: 45px;
-    gap: 10px;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    flex-basis: auto;
-    padding: 12px 34px;
-    border: 11px solid rgba(11, 22, 86, 1);
-  }
-  
-  @media (max-width: 991px) {
-    .violationBanner {
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
-  
-  .violationIcon {
-    aspect-ratio: 0.88;
-    object-fit: contain;
-    object-position: center;
-    width: 60px;
-  }
-  
-  .violationText {
-    flex-basis: auto;
-    flex-grow: 1;
-    margin: auto 0;
-  }
-  
-  @media (max-width: 991px) {
-    .violationText {
-      max-width: 100%;
-    }
-  }
-  
-  .formContainer {
-    align-self: center;
-    z-index: 10;
-    margin-top: -124px;
-    width: 100%;
-    max-width: 1325px;
-  }
-  
-  @media (max-width: 991px) {
-    .formContainer {
-      max-width: 100%;
-    }
-  }
-  
-  .formLayout {
-    gap: 20px;
-    display: flex;
-  }
-  
-  @media (max-width: 991px) {
-    .formLayout {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0px;
-    }
-  }
-  
-  .formColumn {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 46%;
-    margin-left: 0px;
-  }
-  
-  @media (max-width: 991px) {
-    .formColumn {
-      width: 100%;
-    }
-  }
-  
-  .formFields {
-    border-radius: 2px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: start;
-    color: rgba(11, 22, 86, 1);
-    padding: 44px 80px 79px 29px;
-    font: 20px Montserrat, sans-serif;
-  }
-  
-  @media (max-width: 991px) {
-    .formFields {
-      max-width: 100%;
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
-  
-  .fieldGroup {
-    display: flex;
-    gap: 40px 100px;
-  }
-  
-  @media (max-width: 991px) {
-    .fieldGroup {
-      max-width: 100%;
-    }
-  }
-  
-  .fieldWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .fieldLabel {
-    font-weight: 700;
-  }
-  
-  .fieldInput {
-    font-weight: 300;
-    align-self: start;
-    margin-top: 18px;
-  }
-  
-  .dropdownIcon {
-    aspect-ratio: 2.14;
-    object-fit: contain;
-    object-position: center;
-    width: 15px;
-    align-self: end;
-    margin-top: 57px;
-  }
-  
-  @media (max-width: 991px) {
-    .dropdownIcon {
-      margin-top: 40px;
-    }
-  }
-  
-  .fieldDivider {
-    margin-top: 6px;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(142, 140, 139, 1);
-  }
-  
-  .descriptionColumn {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  @media (max-width: 991px) {
-    .descriptionColumn {
-      width: 100%;
-    }
-  }
-  
-  .descriptionWrapper {
-    padding: 10px 0px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .descriptionBox {
-    padding: 10px 30px;
-    border-radius: 15px;
-    height: 100%;
-    background-color: rgba(233, 232, 232, 1);
-  }
-  
-  .descriptionPlaceholder {
-    background-color: rgba(233, 232, 232, 1);
-    border: none;
-    width: 100%;
-    padding: 5px 10px;
-    height: 150px;
-    resize: none;
-  }
-  
-  .descriptionDivider {
-    background-color: rgba(255, 255, 255, 1);
-    height: 5px;
-    border: none;
-  }
-  
-  .buttonGroup {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .submitButton {
-    background-color: rgba(0, 129, 85, 1);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .cancelButton {
-    background-color: rgba(200, 0, 0, 1);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 193px;
+  max-width: none !important;
+}
+
+.header {
+  position: relative;
+  min-height: 383px;
+  width: 100%;
+  padding-bottom: 10px;
+  color: rgba(0, 21, 88, 1);
+  text-transform: uppercase;
+  font: 900 34px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.headerBackground {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contentWrapper {
+  position: relative;
+  background-color: rgba(186, 190, 210, 1);
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 40px 93px;
+  flex-wrap: wrap;
+  padding: 51px 80px 186px 30px;
+}
+
+.logo {
+  aspect-ratio: 2.31;
+  object-fit: contain;
+  object-position: center;
+  width: 139px;
+  align-self: start;
+  max-width: 100%;
+}
+
+.violationBanner {
+  border-radius: 12px;
+  background-color: rgba(216, 217, 219, 1);
+  align-self: end;
+  display: flex;
+  margin-top: 45px;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-basis: auto;
+  padding: 12px 34px;
+  border: 11px solid rgba(11, 22, 86, 1);
+}
+
+.violationIcon {
+  aspect-ratio: 0.88;
+  object-fit: contain;
+  object-position: center;
+  width: 60px;
+}
+
+.violationText {
+  flex-basis: auto;
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.formContainer {
+  align-self: center;
+  z-index: 10;
+  margin-top: -124px;
+  width: 100%;
+  max-width: 1325px;
+}
+
+.formLayout {
+  gap: 20px;
+  display: flex;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 46%;
+  margin-left: 0px;
+}
+
+.formFields {
+  border-radius: 2px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  color: rgba(11, 22, 86, 1);
+  padding: 44px 80px 79px 29px;
+  font: 20px Montserrat, sans-serif;
+}
+
+.fieldGroup {
+  display: flex;
+  gap: 40px 100px;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldLabel {
+  font-weight: 700;
+}
+
+.fieldInput {
+  font-weight: 300;
+  align-self: start;
+  margin-top: 18px;
+}
+
+.dropdownIcon {
+  aspect-ratio: 2.14;
+  object-fit: contain;
+  object-position: center;
+  width: 15px;
+  align-self: end;
+  margin-top: 57px;
+}
+
+.fieldDivider {
+  margin-top: 6px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(142, 140, 139, 1);
+}
+
+.descriptionColumn {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionWrapper {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionBox {
+  padding: 10px 30px;
+  border-radius: 15px;
+  height: 100%;
+  background-color: rgba(233, 232, 232, 1);
+}
+
+.descriptionPlaceholder {
+  background-color: rgba(233, 232, 232, 1);
+  border: none;
+  width: 100%;
+  padding: 5px 10px;
+  height: 150px;
+  resize: none;
+}
+
+.descriptionDivider {
+  background-color: rgba(255, 255, 255, 1);
+  height: 5px;
+  border: none;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submitButton {
+  background-color: rgba(0, 129, 85, 1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: rgba(200, 0, 0, 1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
-import './forgotpassword.css'; // You can create a similar CSS file for styling
+import './forgotpassword.css'; // Your existing CSS
 import { Link } from 'react-router-dom';
+import { sendPasswordResetEmail } from 'firebase/auth'; // Import from Firebase
+import { auth } from '../../firebase'; // Import auth from your Firebase configuration
 
 const ForgotPassword = () => {
-  // State for storing email and errors
+  // State for storing email, success, and error messages
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');  // Reset error state
+    setSuccessMessage('');  // Reset success message
 
     // Basic validation
     if (!email) {
@@ -18,12 +22,15 @@ const ForgotPassword = () => {
       return;
     }
 
-    // Logic for forgot password process (could be an API call)
-    console.log('Reset link sent to:', email);
+    try {
+      // Send password reset email using Firebase
+      await sendPasswordResetEmail(auth, email);
+      setSuccessMessage('A password reset link has been sent to your email.');
+    } catch (error) {
+      setError('Error sending reset email. Please check the email address and try again.');
+    }
 
-    // Simulate success message after form submission
-    setSuccessMessage('A password reset link has been sent to your email.');
-    setError('');
+    // Clear the input field
     setEmail('');
   };
 
@@ -31,7 +38,7 @@ const ForgotPassword = () => {
     <div className='background'>
       <div className="forgot-password-container">
         <h3 className='form-title'>Forgot Password</h3>
-        <form action="#" className="forgot-password-form" onSubmit={handleSubmit}>
+        <form className="forgot-password-form" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             Enter your email address:
             <input

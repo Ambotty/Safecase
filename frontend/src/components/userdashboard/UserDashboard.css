@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #b0b0b0;
 }
-.container {
+.dashboard-container {
     display: flex;
     height: 100vh;
 }
@@ -55,24 +55,24 @@ body {
     width: 75%;
     padding: 20px;
 }
-.header {
+.content-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-.header .logo {
+.content-header .logo {
     font-size: 36px;
     font-weight: bold;
     color: #1a3d7c;
 }
-.header .user-info {
+.content-header .user-info {
     display: flex;
     align-items: center;
     font-size: 18px;
     color: #1a3d7c;
 }
-.header .user-info .user-icon {
+.content-header .user-info .user-icon {
     font-size: 24px;
     margin-left: 10px;
 }
