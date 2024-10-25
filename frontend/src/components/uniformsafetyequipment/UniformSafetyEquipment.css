@@ -8,7 +8,7 @@
 
 .header {
   position: relative;
-  min-height: 383px;
+  min-height: 255px;
   width: 100%;
   padding-bottom: 10px;
   color: rgba(0, 21, 88, 1);
@@ -27,13 +27,13 @@
 
 .contentWrapper {
   position: relative;
-  background-color: rgba(186, 190, 210, 1);
+ 
   display: flex;
   width: 100%;
   align-items: flex-start;
   gap: 40px 93px;
   flex-wrap: wrap;
-  padding: 51px 80px 186px 30px;
+  padding: 0px 43px 0px 112px;
 }
 
 .logo {
@@ -49,10 +49,10 @@
     border-radius: 10px;
     background-color: rgba(216, 217, 219, 1);
     display: inline;
-    margin-top: 45px;
+    margin-top: 15px;
     gap: 10px;
     flex-wrap: wrap;
-    padding: 12px 34px;
+    padding: 0px 34px;
     border: 11px solid rgba(11, 22, 86, 1);
 }
 
@@ -74,7 +74,6 @@
   margin-top: -30px;
   line-height: normal;
   width: 46%;
-  margin-left: 0px;
 }
 
 .formFields {
@@ -84,8 +83,8 @@
   flex-direction: column;
   align-items: start;
   color: rgba(11, 22, 86, 1);
-  padding: 44px 80px 79px 29px;
   font: 20px Montserrat, sans-serif;
+  gap: 10px;
 }
 
 .fieldGroup {
@@ -93,45 +92,42 @@
   gap: 40px 100px;
 }
 
-.fieldWrapper {
+/* .fieldWrapper {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .fieldLabel {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .fieldInput {
-  font-weight: 300;
+  font-weight: 100;
+  font-size: medium;
   align-self: start;
-  margin-top: 18px;
+  margin-top: 14px;
+  width: 358px;
+  height: 30px;
+  border-radius: 5px;
+  /* padding: 0 0 0 1.12rem ; */
+  background-color: #B0B0B0;
+  outline: none;
+  border: none;
+
 }
 
-.dropdownIcon {
-  aspect-ratio: 2.14;
-  object-fit: contain;
-  object-position: center;
-  width: 15px;
-  align-self: end;
-  margin-top: 57px;
-}
 
-.fieldDivider {
-  margin-top: 6px;
-  width: 100%;
-  height: 2px;
-  background-color: rgba(142, 140, 139, 1);
-}
+
 
 .descriptionColumn {
-  width: 48%;
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
 
 .descriptionWrapper {
-  padding: 10px 0px;
+  padding-top: -10px;
+  height: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -141,11 +137,14 @@
   border-radius: 15px;
   height: 100%;
   background-color: rgba(233, 232, 232, 1);
+  
 }
 
 .descriptionPlaceholder {
   background-color: rgba(233, 232, 232, 1);
+  font: 16px Montserrat, sans-serif;
   border: none;
+  outline: none;
   width: 100%;
   padding: 5px 10px;
   height: 150px;
@@ -153,8 +152,9 @@
 }
 
 .descriptionDivider {
-  background-color: rgba(255, 255, 255, 1);
-  height: 5px;
+  background-color:#0B1656;
+  height: 1px;
+  margin-top: 90px;
   border: none;
 }
 
@@ -165,19 +165,26 @@
 }
 
 .submitButton {
-  background-color: rgba(0, 129, 85, 1);
-  color: white;
+  background-color:#fff;
+  color:#0B1656;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font: 14px Montserrat, sans-serif;
 }
 
 .cancelButton {
-  background-color: rgba(200, 0, 0, 1);
+  background-color:#0B1656;
   color: white;
-  border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font: 14px Montserrat, sans-serif;
+}
+.fieldDivider {
+  margin-top: 6px;
+  width: 100%;
+  height: 2px;
+  background-color:#0B1656;
 }

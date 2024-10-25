@@ -26,7 +26,6 @@ function DescriptionBox() {
   return (
     <div className="descriptionWrapper">
       <div className="descriptionBox">
-        <label htmlFor="description" className="visually-hidden">Description</label>
         <textarea
           id="description"
           className="descriptionPlaceholder"
