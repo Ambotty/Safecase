@@ -1,5 +1,6 @@
 import React from "react";
 import './UniformSafetyEquipment.css'; // Import CSS file
+import workimg from "../../assets/work-safety.png";
 
 const formFields = [
   { label: "Violation Type", placeholder: "Select here" },
@@ -47,9 +48,7 @@ function UniformSafetyEquipment() {
     <section className="container">
       <header className="header">
         <div className="contentWrapper">
-          <div className="violationBanner">
-            <h1 className="violationText">Uniform & Safety Equipment Violation</h1>
-          </div>
+        <h1 className="violationText">Uniform & Safety Equipment Violation</h1>
         </div>
       </header>
       <main className="formContainer">

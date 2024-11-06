@@ -38,7 +38,7 @@ const App = () => {
       <div className="app">
         <Routes>
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Navbar />} />
+          <Route path="/login" element={<Navbar />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/uniform-safety-equipment" element={<UniformSafetyEquipment />} /> 
           <Route path="/health-and-safety-incidents" element={<HealthAndSafetyIncidents />} /> 
@@ -53,7 +53,7 @@ const App = () => {
           />
 
           {/* Default route - redirects to /login */}
-          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
+          <Route path="/" element={<Navbar />} />
         </Routes>
       </div>
     </Router>
